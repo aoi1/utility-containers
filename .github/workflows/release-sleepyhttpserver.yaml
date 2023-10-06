@@ -39,6 +39,6 @@ jobs:
         with:
           push: true
           platforms: linux/amd64,linux/arm64
-          tags: blux2/sleepyhttpserver:${{ GITHUB_OUTPUT }}
+          tags: blux2/sleepyhttpserver:${{steps.get_version.outputs.VERSION}}
           context: ./sleepyhttpserver
           file: ./sleepyhttpserver/Dockerfile
